@@ -13,7 +13,6 @@ public class Main {
      * instanciar un objeto Celular y poder cargarlo en nuestro programa.
      *  Método ingresarCodigo(): este método permitirá ingresar el código completo de siete
      * números de un celular. Para ello, puede utilizarse un bucle repetitivo
-     *
      */
     public static void main(String[] args) {
         MovilServicio service = new MovilServicio();

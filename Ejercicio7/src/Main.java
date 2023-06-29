@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     /**
-
      * A continuación, en la clase main hacer lo siguiente:
      * Crear 4 objetos de tipo Persona con distintos valores, a continuación, llamaremos todos
      * los métodos para cada objeto, deberá comprobar si la persona está en su peso ideal,
@@ -12,31 +11,27 @@ public class Main {
      * distintas variables, para después en el main, calcular un porcentaje de esas 4 personas
      * cuantas están por debajo de su peso, cuantas en su peso ideal y cuantos, por encima, y
      * también calcularemos un porcentaje de cuantos son mayores de edad y cuantos menores
-     * @param args
-     *
-
-     *         */
+      */
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
         int cantMayores = 0;
         int cantMenores = 0;
         int cantPesoIdeal = 0;
         int cantSobrePeso = 0;
         int cantFaltaPeso = 0;
-        int IMC =0;
+        int IMC = 0;
         boolean mayor = false;
 
         System.out.println("Cuantas personas va a ingresar al sistema");
         int per = sc.nextInt();
 
           for(int i =0; i < per ; i ++){
-              Persona p =  new Persona();
               ServicePersona service = new ServicePersona();
-              service.crearPersona(p);
-               IMC = service.calcularIMC(p);
-               mayor = service.esMayorDeEdad(p);
+              service.crearPersona();
+               IMC = service.calcularIMC();
+               mayor = service.esMayorDeEdad();
+
               switch (IMC) {
                   case 0:
                       cantPesoIdeal++;

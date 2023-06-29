@@ -13,15 +13,7 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-
         LibroService service = new LibroService();
-        Libro libro = service.cargarLibro();
-        System.out.println(libro.toString());
-
-
-
-
-
-
+        service.cargarLibro();
     }
 }

@@ -13,8 +13,8 @@ public class Main {
      * 20.
      */
     public static void main(String[] args) {
-        double[] arregloA = new double[5];
-        double[] arregloB = new double[3];
+        double[] arregloA = new double[20];
+        double[] arregloB = new double[10];
         Random random = new Random();
         System.out.println("El primer arreglo esta formado por los sigueintes numeros: ");
         for(int i = 0; i < arregloA.length; i++){
@@ -27,8 +27,5 @@ public class Main {
             arregloB[i] = arregloA[i];
             System.out.println(arregloB[i]);
         }
-
-
-
     }
 }

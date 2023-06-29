@@ -1,12 +1,15 @@
 public class ServiceMatematica {
-   /**
-      a) Método devolverMayor() para retornar cuál de los dos atributos tiene el mayor valor
-     */
 
-    public double devolverMayor(Matematica m){
+    Matematica m = new Matematica();
+
+    public ServiceMatematica() {
+        m.setNum1(Math.random());
+        m.setNum2(Math.random());
+    }
+
+    public double devolverMayor(){
         double num1 = m.getNum1();
         double num2 = m.getNum2();
-
         if(num1 > num2){
             System.out.println("El numero mayor es: " + num1);
             return num1;
@@ -15,15 +18,14 @@ public class ServiceMatematica {
             return num2;
         }
     }
-
     /**
      *  * b) Método calcularPotencia() para calcular la potencia del mayor valor de la clase
      *      * elevado al menor número. Previamente se deben redondear ambos valores.
      *
      */
 
-    public void calcularPotencia(Matematica m){
-        double base = devolverMayor(m);
+    public void calcularPotencia(){
+        double base = devolverMayor();
         double expo = Math.min(m.getNum1(), m.getNum2());
         long baseR = Math.round(base);
         long expoR = Math.round(expo);
@@ -38,7 +40,7 @@ public class ServiceMatematica {
  * Antes de calcular la raíz cuadrada se debe obtener el valor absoluto del número.
  */
 
-public void calcularRaiz(Matematica m){
+public void calcularRaiz(){
     double menor = Math.min(m.getNum1(),m.getNum2());
     double menorAbs = Math.abs(menor);
 

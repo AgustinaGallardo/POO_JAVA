@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class AutorService {
     Scanner sc = new Scanner(System.in);
     public Autor crearAutor(){

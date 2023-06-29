@@ -6,7 +6,6 @@ public class MovilServicio {
      *  Método cargarCelular(): se solicita al usuario que ingrese los datos necesarios para
      *    instanciar un objeto Celular y poder cargarlo en nuestro programa.
      */
-
     Scanner sc = new Scanner(System.in);
     public Movil cargarCelular(){
         System.out.println("Ingrese la marca del celular");
@@ -23,15 +22,10 @@ public class MovilServicio {
         int[] codigo = ingresarCodigo();
         return new Movil(marca,precio,memoria,almacenamiento,codigo);
     }
-
-
     /**
      *  Método ingresarCodigo(): este método permitirá ingresar el código completo de siete
      * números de un celular. Para ello, puede utilizarse un bucle repetitivo
-     *
      */
-
-
     public int[] ingresarCodigo(){
         int[] codigo = new int[7];
         for(int i =0; i< codigo.length;i++){
@@ -42,7 +36,6 @@ public class MovilServicio {
         }
         return codigo;
     }
-
     public void mostrarMovil(){
         Movil m = cargarCelular();
         System.out.println(m.toString());

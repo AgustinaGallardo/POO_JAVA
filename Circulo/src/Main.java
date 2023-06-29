@@ -16,11 +16,10 @@ public class Main {
      */
     public static void main(String[] args) {
         ServiceCirculo service = new ServiceCirculo();
-        Circunferencia c = new Circunferencia();
-        service.crearCircunferencia(c);
-        double area =  service.calcularArea(c);
-        double perimetro = service.calcularPerimetro(c);
-        System.out.println("El area del circulo es de: " + area + " y el perimero es: " + perimetro);
+        service.crearCircunferencia();
+        double area =  service.calcularArea();
+        double perimetro = service.calcularPerimetro();
+        System.out.println("El area del circulo es de: " + Math.round(area) + " y el perimero es: " + Math.round(perimetro));
 
     }
 }

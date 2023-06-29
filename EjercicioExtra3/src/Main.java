@@ -21,6 +21,9 @@ public class Main {
      *
      */
     public static void main(String[] args) {
-
+        RaicesService service = new RaicesService();
+        service.getDiscriminante();
+        service.tieneRaices();
+        service.calcular();
     }
 }

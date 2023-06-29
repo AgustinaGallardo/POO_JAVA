@@ -5,7 +5,7 @@ import Model.Libro;
 import java.util.Scanner;
 
 public class LibroService {
-    public Libro cargarLibro(){
+    public void cargarLibro(){
         Libro libro = new Libro();
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese el ISBN del libro");
@@ -18,7 +18,7 @@ public class LibroService {
         sc.nextLine();
         System.out.println("ingrese el autor del libro");
         libro.setAutor(sc.nextLine());
-        return libro;
+        System.out.println(libro.toString());
     }
 
 }

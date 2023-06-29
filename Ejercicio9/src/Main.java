@@ -10,17 +10,9 @@ public class Main {
      *
      */
     public static void main(String[] args) {
-
-
-        double num1 = Math.random();
-        double num2 = Math.random();
-        Matematica m = new Matematica(num1,num2);
         ServiceMatematica service = new ServiceMatematica();
-        service.devolverMayor(m);
-        service.calcularPotencia(m);
-        service.calcularRaiz(m);
-
-
-
+        service.devolverMayor();
+        service.calcularPotencia();
+        service.calcularRaiz();
     }
 }

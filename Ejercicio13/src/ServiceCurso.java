@@ -1,18 +1,15 @@
 import java.util.Scanner;
 
 public class ServiceCurso {
-
-    /**
-     *   método cargarAlumnos(): este método le permitirá al usuario ingresar los alumnos
-     *      *      * que asisten a las clases. Nosotros nos encargaremos de almacenar esta información
-     *      *      * en un arreglo e iterar con un bucle, solicitando en cada repetición que se ingrese el
-     *      *      * nombre de cada alumno.
+    /**   método cargarAlumnos(): este método le permitirá al usuario ingresar los alumnos
+     *       que asisten a las clases. Nosotros nos encargaremos de almacenar esta información
+     *       en un arreglo e iterar con un bucle, solicitando en cada repetición que se ingrese el
+     *       nombre de cada alumno.
      */
     Scanner sc = new Scanner(System.in);
     public String[] cargarAlumnos(){
         String[] alumnos = new String[5];
         String apellido = "";
-
         for(int i =0; i < alumnos.length; i++){
             System.out.println("Ingrese el nombre del alumno: " + (i+1) + ": ");
             apellido = sc.nextLine();
@@ -20,12 +17,11 @@ public class ServiceCurso {
         }
         return alumnos;
     }
-
     /**
-     *  *  Método crearCurso(): el método crear curso, le pide los valores de los atributos al
-     *      *      * usuario y después se le asignan a sus respectivos atributos para llenar el objeto
-     *      *      * Curso. En este método invocaremos al método cargarAlumnos() para asignarle valor
-     *      *      * al atributo alumnos
+     *   Método crearCurso(): el método crear curso, le pide los valores de los atributos al
+     *      usuario y después se le asignan a sus respectivos atributos para llenar el objeto
+     *      Curso. En este método invocaremos al método cargarAlumnos() para asignarle valor
+     *      al atributo alumnos
      */
     public Curso crearCurso(){
         System.out.println("Ingrese el nombre del curso");
@@ -48,7 +44,6 @@ public class ServiceCurso {
         String[] alumnos = cargarAlumnos();
         return new Curso(nombreCurso,cantidadHoras,horasPorSemana,turnoM,precioPorHora,alumnos);
     }
-
     /**
      *   Método calcularGananciaSemanal(): este método se encarga de calcular la ganancia
      *   en una semana por curso. Para ello, se deben multiplicar la cantidad de horas por
@@ -64,6 +59,4 @@ public class ServiceCurso {
         double porSemana = porAlumnos * c.getCantidadHorasPorSemana();
         System.out.println("La ganancia en una semana por curso es de: " + porSemana);
     }
-
-
 }

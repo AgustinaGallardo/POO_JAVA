@@ -35,10 +35,8 @@ public class Main {
         //OTRA FORMA DE RESOLVERLO:
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-
         System.out.println("Ingrese la fecha (formato dd/MM/yyyy):");
         String fechaString = sc.nextLine();
-
         try {
             Date fechaOptima = dateFormat.parse(fechaString);
             System.out.println("Fecha ingresada: " + fechaString);

@@ -1,6 +1,15 @@
+import java.util.Scanner;
+
 public class ServiceCadena {
-       public Cadena crearCadena(String frase){
-        Cadena c = new Cadena();
+    private Cadena c = new Cadena();
+
+    public ServiceCadena() {
+    }
+    Scanner sc = new Scanner(System.in);
+
+    public Cadena crearCadena(){
+        System.out.println("Que frase quiere ingresar");
+        String frase = sc.nextLine();
         String f = frase.toLowerCase();
         c.setFrase(f);
         c.setLongitud(frase.length());
@@ -12,15 +21,16 @@ public class ServiceCadena {
      *      *      * frase ingresada.
      */
 
-    public int mostrarVocales(String c){
+    public void mostrarVocales(){
         int vocales = 0;
-        for (char letra : c.toCharArray()) {
+        String cadena = c.getFrase();
+        for (char letra : cadena.toCharArray()) {
             if(letra ==  'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
                 vocales++;
             }
 
         }
-        return vocales;
+        System.out.println("La cadena tiene " + vocales + " vocales");
     }
 
     /**
@@ -28,14 +38,14 @@ public class ServiceCadena {
      *      *      * ejemplo: Entrada: "casa blanca", Salida: "acnalb asac".
      */
 
-    public String invertirFrase(String c){
-
+    public void invertirFrase(){
         String invertida = "";
-        for(int i = c.length() - 1; i >= 0; i--)
+        String cadena = c.getFrase();
+        for(int i = cadena.length() - 1; i >= 0; i--)
         {
-            invertida +=  c.charAt(i);
+            invertida +=  cadena.charAt(i);
         }
-        return invertida;
+        System.out.println("La cadena invertida es: " + invertida);
     }
 
     /**
@@ -44,8 +54,12 @@ public class ServiceCadena {
      *    d) Entrada: frase = "casa blanca". Salida: El carácter 'a' se repite 4 veces.
      */
 
-    public void vecesRepetido(char letra, String frase){
+    public void vecesRepetido(){
+        System.out.println("Que letra quiere contar cuantas veces se repite en la frase");
+        String letraStr = sc.nextLine();
+        char letra = letraStr.charAt(0);
         int conta = 0;
+        String frase = c.getFrase();
         for(int i = 0; i < frase.length() - 1; i++) {
             if (letra ==(frase.charAt(i))){
                 conta++;
@@ -59,7 +73,10 @@ public class ServiceCadena {
      *  e) Método compararLongitud(String frase), deberá comparar la longitud de la frase que
      *   compone la clase con otra nueva frase ingresada por el usuario.
      */
-public void compararLongitud(String frase, String fraseNueva){
+public void compararLongitud(){
+    System.out.println("Ingrese otra frase para comparar las longitudes");
+    String fraseNueva = sc.nextLine();
+    String frase = c.getFrase();
     int fraseN = fraseNueva.length();
     int fraseC = frase.length();
     if(fraseN == fraseC){
@@ -67,7 +84,6 @@ public void compararLongitud(String frase, String fraseNueva){
     }else{
         System.out.println("Las cadenas tienen longitudes distintas");
     }
-
 }
 
 /**
@@ -75,8 +91,10 @@ public void compararLongitud(String frase, String fraseNueva){
  *      con una nueva frase ingresada por el usuario y mostrar la frase resultante.
  */
 
-public void unirFrase(String frase, String cadena){
-    System.out.println( frase + " , " + cadena);
+public void unirFrase(){
+    System.out.println("Ingrese alguna frase para unir con la frase ingresada");
+    String nueva = sc.nextLine();
+    System.out.println( c.getFrase() + " , " + nueva);
 }
 
 /**
@@ -86,8 +104,11 @@ public void unirFrase(String frase, String cadena){
  *      * la frase resultante.
  */
 
-public void  reemplazar(String letra, String c){
-         String reemplazo = c.replaceAll("a",letra);
+public void  reemplazar(){
+    System.out.println("Por cual letra le gustaria reemplazar la a de la frase");
+    String let = sc.nextLine();
+    String frase = c.getFrase();
+    String reemplazo = frase.replaceAll("a",let);
     System.out.println(reemplazo);
 }
 /**
@@ -96,15 +117,17 @@ public void  reemplazar(String letra, String c){
  *
  */
 
-public boolean contiene(String letra, String c){
+public void contiene(){
+    System.out.println("Ingrese que letra le gustaria saber si esta contenida en la frase");
+    String letra = sc.nextLine();
     boolean contiene = false;
-    for(int i = 0; i< c.length();i++){
-        if(letra.equals(c.charAt(i))){
-            return true;
+    String frase = c.getFrase();
+    for(int i = 0; i< frase.length();i++){
+        if(letra.equals(frase.charAt(i))){
+            contiene = true;
         }
     }
-    return contiene;
+    System.out.println("La letra " +letra+ " se encuentra en la frase? " + contiene);
 }
-
 
 }

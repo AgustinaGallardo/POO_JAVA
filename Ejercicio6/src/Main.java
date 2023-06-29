@@ -12,12 +12,10 @@ public class Main {
      */
     public static void main(String[] args) {
         ServiceCafetera sCaf  = new ServiceCafetera();
-        Cafetera caf = new Cafetera();
-        sCaf.llenarCafetera(caf);
-        sCaf.servirTaza(caf);
-        sCaf.agregarCafe(caf);
-        sCaf.vaciarCafetera(caf);
-        sCaf.llenarCafetera(caf);
-        System.out.println(caf.toString());
+        sCaf.llenarCafetera();
+        sCaf.servirTaza();
+        sCaf.agregarCafe();
+        sCaf.vaciarCafetera();
+        sCaf.llenarCafetera();
     }
 }

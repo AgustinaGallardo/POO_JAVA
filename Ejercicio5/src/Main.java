@@ -23,48 +23,35 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         CuentaService service = new CuentaService();
-        Cuenta c = new Cuenta();
-
-       service.crearCuenta(c);
-
-       service.consultarDatos(c);
+       service.crearCuenta();
+       service.consultarDatos();
 
         System.out.println("Quiere una extraccion rapida SI/NO");
         String extra = sc.nextLine();
 
         if(extra.equalsIgnoreCase("SI"))
         {
-            service.extraccionRapida(c);
+            service.extraccionRapida();
         }
 
         System.out.println("Quiere depositar dinero SI/NO");
         String deposito = sc.nextLine();
-
         if(deposito.equalsIgnoreCase("SI"))
         {
-            service.ingresoCuenta(c);
+            service.depositar();
         }
 
         System.out.println("quiere retirar dinero SI/NO");
         String retiro = sc.nextLine();
-
         if(retiro.equalsIgnoreCase("SI")){
-            service.retirarDinero(c);
+            service.retirarDinero();
         }
 
         System.out.println("quiere ver el saldo SI/NO");
         String saldo = sc.nextLine();
-
         if(saldo.equalsIgnoreCase("SI")){
-            service.verSaldo(c);
+            service.verSaldo();
         }
-
         System.out.println("ADIOS");
-
-
-
-
-
-
     }
 }

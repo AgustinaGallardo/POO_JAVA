@@ -11,14 +11,11 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-
         RectanguloService service = new RectanguloService();
-        Rectangulo rec = new Rectangulo();
-        rec = service.crearRectangulo();
-        int perimetro = service.calcularPerimetro(rec);
-        int sup = service.calcularSuperficie(rec);
-        service.dibujarRectangulo(rec);
-
+        service.crearRectangulo();
+        int perimetro = service.calcularPerimetro();
+        int sup = service.calcularSuperficie();
+        service.dibujarRectangulo();
         System.out.println("El perimetro es: " + perimetro + " y  la superficie es: " + sup);
     }
 }

@@ -15,21 +15,17 @@ public class Main {
      * h) Método dividir(): primero valida que no se haga una división por cero, si fuera a pasar
      * una división por cero, el método devuelve 0 y se le informa al usuario el error se le
      * informa al usuario. Si no, se hace la división y se devuelve el resultado al main.
-     * @param args
      */
     public static void main(String[] args) {
-
         OperacionService service = new OperacionService();
-        Operacion o = new Operacion();
-        service.crearOperacion(o);
-        double suma = service.calcularSuma(o);
-        double resta = service.calcularResta(o);
-        double multi = service.calcularMulti(o);
-        double div = service.calcularDiv(o);
-
-        System.out.println("La suma de : "  + o.getNum1() + " y " + o.getNum2() + " es: " + suma +
-                " || la resta es: " + resta +
-                " || la multiplicacion es: " + multi +
+        service.crearOperacion();
+        double suma = service.calcularSuma();
+        double resta = service.calcularResta();
+        double multi = service.calcularMulti();
+        double div = service.calcularDiv();
+        System.out.println("La suma de los numeros es: " + Math.round(suma) +
+                " || la resta: " + Math.round(resta) +
+                " || la multiplicacion: " + Math.round(multi) +
                 " || y la division es: " + div);
     }
 }

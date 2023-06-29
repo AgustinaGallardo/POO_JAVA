@@ -1,6 +1,5 @@
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
 public class Persona {
     private String nombre;
     private Calendar fecha_nac;
@@ -8,7 +7,6 @@ public class Persona {
     public String toString() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String fechaFormateada = dateFormat.format(fecha_nac.getTime());
-
         return "Persona{" +
                 "nombre='" + nombre + '\'' +
                 ", fecha_nac=" + fechaFormateada +
