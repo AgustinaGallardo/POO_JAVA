@@ -31,6 +31,7 @@ public class ServiceCadena {
 
         }
         System.out.println("La cadena tiene " + vocales + " vocales");
+
     }
 
     /**

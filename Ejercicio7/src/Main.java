@@ -26,7 +26,7 @@ public class Main {
         System.out.println("Cuantas personas va a ingresar al sistema");
         int per = sc.nextInt();
 
-          for(int i =0; i < per ; i ++){
+          for(int i = 0; i < per ; i ++){
               ServicePersona service = new ServicePersona();
               service.crearPersona();
                IMC = service.calcularIMC();

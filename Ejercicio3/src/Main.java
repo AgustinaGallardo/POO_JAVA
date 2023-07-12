@@ -18,6 +18,7 @@ public class Main {
      */
     public static void main(String[] args) {
         OperacionService service = new OperacionService();
+        OperacionService service2 = new OperacionService();
         service.crearOperacion();
         double suma = service.calcularSuma();
         double resta = service.calcularResta();
